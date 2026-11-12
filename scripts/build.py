@@ -4,7 +4,7 @@ import csv, glob, html, json, os, re, shutil, sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DIST = os.path.join(ROOT, "dist")
 E = html.escape
-NAV = [("index.html", "首頁"), ("laws.html", "法規知識庫"), ("sources.html", "資料來源與同步紀錄"), ("errata.html", "勘誤"),
+NAV = [("index.html", "首頁"), ("topics.html", "實務問題"), ("laws.html", "法規知識庫"), ("sources.html", "資料來源與同步紀錄"), ("errata.html", "勘誤"),
        ("monitor.html", "工作日誌與監控"), ("charter.html", "憲章"), ("about.html", "關於")]
 WARN = "依當年度財政部公告為準"
 
@@ -112,6 +112,17 @@ function render(){{const k=q.value.trim();if(!k){{out.innerHTML='';return}}
  out.innerHTML=hit.slice(0,50).map(a=>'<div class="panel"><div class="meta"><span>'+esc(a.law)+'</span><span>修正 '+esc(a.amended)+'</span></div><h3><a href="'+a.url+'">第 '+esc(String(a.no))+' 條</a></h3><p>'+esc(a.text).replace(/\\n/g,'<br>')+'</p></div>').join('')||'<p class="mut">找不到，換個關鍵字試試。</p>';}}
 q.addEventListener('input',render);
 </script>''')
+
+    # 實務問題前 20 名（選題池）：只放題目與排名，不放法規解讀；解讀要寫成文章、過閘門並經本人核准
+    tp = json.load(open(os.path.join(ROOT, "data", "topics.json"), encoding="utf8"))
+    done = {a["id"]: a["title"] for a in arts}
+    trs = "".join(f'<tr><td>{t["rank"]}</td><td>{E(t["question"])}</td><td>{E(t["category"])}</td><td>{t["freq"]}</td><td>{t["official"]}</td><td>{t["impact"]}</td><td>{t["score"]}</td><td>' +
+                  (f'<a href="articles/{E(t["article_id"])}.html">已有文章</a>' if t.get("article_id") in done else '<span class="mut">尚未寫成文章</span>') + "</td></tr>" for t in tp["topics"])
+    page("topics.html", "實務問題", f'''<h1>會計人實務問題前 20 名</h1>
+<p>這是會計圓桌的選題池：台灣會計人在論壇、社群與官方宣導裡最常遇到的 20 個實務問題。每一題之後會寫成附法規出處的文章，經本人核准後才會上線。</p>
+<div class="tw"><table><tr><th>名次</th><th>問題</th><th>類別</th><th>討論頻度</th><th>官方點名</th><th>出錯後果</th><th>總分</th><th>文章</th></tr>{trs}</table></div>
+<h2>怎麼排名的</h2><p>以關鍵字搜尋 PTT、Dcard、Mobile01、Threads、事務所部落格與財政部、國稅局、健保署宣導頁，約 20 組搜尋、200 筆結果。每題依討論頻度、官方點名、出錯後果各給 1 到 3 分，滿分 9 分。整理日期 {E(tp["compiledAt"])}。</p>
+<p class="mut">限制：這是有依據的估計排名，不是統計抽樣。許多論壇文章是 2015 到 2023 年的舊文，搜尋引擎的排序也會影響看到哪些文章。</p>''')
 
     # 資料來源與同步紀錄
     src = [["編號", "法規", "最新修正日期", "條數", "官方連結"]] + [[f"SRC-{n:03d}", l["name"], l["amended"], str(l["count"]), l["source"]] for n, l in enumerate(idx["laws"], 1)]
