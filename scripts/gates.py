@@ -14,6 +14,7 @@ WARNING = "依當年度財政部公告為準"
 HOTLINE = "0800-000321"
 NEEDS_WARNING = re.compile(r"稅率|限額|期限|千分之|百分之|\d+\s*[%％]")
 MAX_AGE_DAYS = 7
+EXPECTED_LAWS = 30  # docs/02_資料來源清單：SRC-001 到 SRC-030（憲章 v1.1）
 REQUIRED_PAGES = ["index.html", "topics.html", "laws.html", "sources.html", "errata.html", "charter.html", "monitor.html", "about.html"]
 ERRATA_FIELDS = ["id", "found_at", "article_id", "was", "now", "basis", "found_by", "fixed_at", "published", "new_rule"]
 ARTICLE_FIELDS = ["id", "title", "topic", "body", "facts", "citations", "ai_generated", "approved_by", "approved_at", "edit_level", "sync_date"]
@@ -106,7 +107,7 @@ def g8_hand_cases():
 
 def g9_sources(idx, root=ROOT):
     probs = []
-    if len(idx["laws"]) != 12: probs.append(f"資料來源應為 12 部法規，目前 {len(idx['laws'])} 部")
+    if len(idx["laws"]) != EXPECTED_LAWS: probs.append(f"資料來源應為 {EXPECTED_LAWS} 部法規，目前 {len(idx['laws'])} 部")
     for l in idx["laws"]:
         p = os.path.join(root, "data", "laws", l["pcode"] + ".json")
         if not os.path.exists(p): probs.append(f"缺少法規檔：{l['name']}"); continue

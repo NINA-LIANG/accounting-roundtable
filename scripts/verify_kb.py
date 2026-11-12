@@ -5,7 +5,7 @@ import csv, html, json, os, random, re, sys, time, urllib.request
 from datetime import datetime, timezone, timedelta
 HERE = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data")
 TZ = timezone(timedelta(hours=8))
-EXPECT = 12
+EXPECT = 30
 MAX_AGE_DAYS = 7  # 憲章發布關卡②：超過 7 天未同步即不通過
 
 def norm(s):

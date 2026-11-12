@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-12T01:11:24+0800",
+ "syncedAt": "2026-11-12T23:05:13+0800",
  "laws": [
   {
    "pcode": "G0340080",
@@ -7,7 +7,7 @@
    "topic": "營業稅",
    "amended": "民國 114 年 05 月 28 日",
    "source": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340080",
-   "fetchedAt": "2026-11-12T01:11:24+0800",
+   "fetchedAt": "2026-11-12T23:05:13+0800",
    "count": 80,
    "stale": false
   },
@@ -17,7 +17,7 @@
    "topic": "營業稅",
    "amended": "民國 113 年 12 月 17 日",
    "source": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340081",
-   "fetchedAt": "2026-11-12T01:11:24+0800",
+   "fetchedAt": "2026-11-12T23:05:13+0800",
    "count": 69,
    "stale": false
   },
@@ -27,7 +27,7 @@
    "topic": "營業稅",
    "amended": "民國 113 年 12 月 12 日",
    "source": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340082",
-   "fetchedAt": "2026-11-12T01:11:24+0800",
+   "fetchedAt": "2026-11-12T23:05:13+0800",
    "count": 38,
    "stale": false
   },
@@ -37,7 +37,7 @@
    "topic": "所得稅",
    "amended": "民國 115 年 09 月 11 日",
    "source": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340003",
-   "fetchedAt": "2026-11-12T01:11:24+0800",
+   "fetchedAt": "2026-11-12T23:05:13+0800",
    "count": 198,
    "stale": false
   },
@@ -47,7 +47,7 @@
    "topic": "所得稅",
    "amended": "民國 111 年 02 月 21 日",
    "source": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340004",
-   "fetchedAt": "2026-11-12T01:11:24+0800",
+   "fetchedAt": "2026-11-12T23:05:13+0800",
    "count": 179,
    "stale": false
   },
@@ -57,7 +57,7 @@
    "topic": "所得稅",
    "amended": "民國 112 年 12 月 11 日",
    "source": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340051",
-   "fetchedAt": "2026-11-12T01:11:24+0800",
+   "fetchedAt": "2026-11-12T23:05:13+0800",
    "count": 143,
    "stale": false
   },
@@ -67,7 +67,7 @@
    "topic": "稽徵與罰則",
    "amended": "民國 110 年 12 月 17 日",
    "source": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340001",
-   "fetchedAt": "2026-11-12T01:11:24+0800",
+   "fetchedAt": "2026-11-12T23:05:13+0800",
    "count": 74,
    "stale": false
   },
@@ -77,7 +77,7 @@
    "topic": "稽徵與罰則",
    "amended": "民國 111 年 05 月 23 日",
    "source": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340039",
-   "fetchedAt": "2026-11-12T01:11:24+0800",
+   "fetchedAt": "2026-11-12T23:05:13+0800",
    "count": 18,
    "stale": false
   },
@@ -87,7 +87,7 @@
    "topic": "稽徵與罰則",
    "amended": "民國 114 年 12 月 24 日",
    "source": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340040",
-   "fetchedAt": "2026-11-12T01:11:24+0800",
+   "fetchedAt": "2026-11-12T23:05:13+0800",
    "count": 40,
    "stale": false
   },
@@ -97,7 +97,7 @@
    "topic": "商業會計",
    "amended": "民國 103 年 06 月 18 日",
    "source": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080009",
-   "fetchedAt": "2026-11-12T01:11:24+0800",
+   "fetchedAt": "2026-11-12T23:05:13+0800",
    "count": 87,
    "stale": false
   },
@@ -107,7 +107,7 @@
    "topic": "商業會計",
    "amended": "民國 115 年 07 月 03 日",
    "source": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080010",
-   "fetchedAt": "2026-11-12T01:11:24+0800",
+   "fetchedAt": "2026-11-12T23:05:13+0800",
    "count": 45,
    "stale": false
   },
@@ -117,8 +117,188 @@
    "topic": "票據",
    "amended": "民國 76 年 06 月 29 日",
    "source": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0380028",
-   "fetchedAt": "2026-11-12T01:11:24+0800",
+   "fetchedAt": "2026-11-12T23:05:13+0800",
    "count": 147,
+   "stale": false
+  },
+  {
+   "pcode": "L0060001",
+   "name": "全民健康保險法",
+   "topic": "健保",
+   "amended": "民國 112 年 06 月 28 日",
+   "source": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0060001",
+   "fetchedAt": "2026-11-12T23:05:13+0800",
+   "count": 106,
+   "stale": false
+  },
+  {
+   "pcode": "L0060002",
+   "name": "全民健康保險法施行細則",
+   "topic": "健保",
+   "amended": "民國 114 年 10 月 20 日",
+   "source": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0060002",
+   "fetchedAt": "2026-11-12T23:05:13+0800",
+   "count": 75,
+   "stale": false
+  },
+  {
+   "pcode": "L0060027",
+   "name": "全民健康保險扣取及繳納補充保險費辦法",
+   "topic": "健保",
+   "amended": "民國 113 年 03 月 20 日",
+   "source": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0060027",
+   "fetchedAt": "2026-11-12T23:05:13+0800",
+   "count": 12,
+   "stale": false
+  },
+  {
+   "pcode": "N0030020",
+   "name": "勞工退休金條例",
+   "topic": "勞退",
+   "amended": "民國 108 年 05 月 15 日",
+   "source": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030020",
+   "fetchedAt": "2026-11-12T23:05:13+0800",
+   "count": 69,
+   "stale": false
+  },
+  {
+   "pcode": "N0030021",
+   "name": "勞工退休金條例施行細則",
+   "topic": "勞退",
+   "amended": "民國 115 年 07 月 15 日",
+   "source": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030021",
+   "fetchedAt": "2026-11-12T23:05:13+0800",
+   "count": 63,
+   "stale": false
+  },
+  {
+   "pcode": "N0050001",
+   "name": "勞工保險條例",
+   "topic": "勞保",
+   "amended": "民國 115 年 01 月 21 日",
+   "source": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0050001",
+   "fetchedAt": "2026-11-12T23:05:13+0800",
+   "count": 104,
+   "stale": false
+  },
+  {
+   "pcode": "N0050031",
+   "name": "勞工職業災害保險及保護法",
+   "topic": "勞保",
+   "amended": "民國 110 年 04 月 30 日",
+   "source": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0050031",
+   "fetchedAt": "2026-11-12T23:05:13+0800",
+   "count": 109,
+   "stale": false
+  },
+  {
+   "pcode": "N0050021",
+   "name": "就業保險法",
+   "topic": "勞保",
+   "amended": "民國 111 年 01 月 12 日",
+   "source": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0050021",
+   "fetchedAt": "2026-11-12T23:05:13+0800",
+   "count": 47,
+   "stale": false
+  },
+  {
+   "pcode": "N0030001",
+   "name": "勞動基準法",
+   "topic": "勞動基準",
+   "amended": "民國 113 年 07 月 31 日",
+   "source": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030001",
+   "fetchedAt": "2026-11-12T23:05:13+0800",
+   "count": 98,
+   "stale": false
+  },
+  {
+   "pcode": "N0030002",
+   "name": "勞動基準法施行細則",
+   "topic": "勞動基準",
+   "amended": "民國 113 年 03 月 27 日",
+   "source": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030002",
+   "fetchedAt": "2026-11-12T23:05:13+0800",
+   "count": 70,
+   "stale": false
+  },
+  {
+   "pcode": "N0090001",
+   "name": "就業服務法",
+   "topic": "外籍移工",
+   "amended": "民國 114 年 01 月 20 日",
+   "source": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0090001",
+   "fetchedAt": "2026-11-12T23:05:13+0800",
+   "count": 85,
+   "stale": false
+  },
+  {
+   "pcode": "N0090006",
+   "name": "就業服務法施行細則",
+   "topic": "外籍移工",
+   "amended": "民國 113 年 06 月 18 日",
+   "source": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0090006",
+   "fetchedAt": "2026-11-12T23:05:13+0800",
+   "count": 17,
+   "stale": false
+  },
+  {
+   "pcode": "N0090027",
+   "name": "雇主聘僱外國人許可及管理辦法",
+   "topic": "外籍移工",
+   "amended": "民國 114 年 12 月 30 日",
+   "source": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0090027",
+   "fetchedAt": "2026-11-12T23:05:13+0800",
+   "count": 81,
+   "stale": false
+  },
+  {
+   "pcode": "N0090029",
+   "name": "外國人從事就業服務法第四十六條第一項第八款至第十款工作資格及審查標準",
+   "topic": "外籍移工",
+   "amended": "民國 115 年 04 月 11 日",
+   "source": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0090029",
+   "fetchedAt": "2026-11-12T23:05:13+0800",
+   "count": 81,
+   "stale": false
+  },
+  {
+   "pcode": "G0340028",
+   "name": "各類所得扣繳率標準",
+   "topic": "所得稅",
+   "amended": "民國 110 年 06 月 30 日",
+   "source": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340028",
+   "fetchedAt": "2026-11-12T23:05:13+0800",
+   "count": 16,
+   "stale": false
+  },
+  {
+   "pcode": "G0340115",
+   "name": "所得基本稅額條例",
+   "topic": "所得稅",
+   "amended": "民國 110 年 01 月 27 日",
+   "source": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340115",
+   "fetchedAt": "2026-11-12T23:05:13+0800",
+   "count": 20,
+   "stale": false
+  },
+  {
+   "pcode": "J0040051",
+   "name": "產業創新條例",
+   "topic": "產業創新",
+   "amended": "民國 115 年 09 月 30 日",
+   "source": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0040051",
+   "fetchedAt": "2026-11-12T23:05:13+0800",
+   "count": 87,
+   "stale": false
+  },
+  {
+   "pcode": "J0080001",
+   "name": "公司法",
+   "topic": "公司",
+   "amended": "民國 114 年 12 月 26 日",
+   "source": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080001",
+   "fetchedAt": "2026-11-12T23:05:13+0800",
+   "count": 534,
    "stale": false
   }
  ],
