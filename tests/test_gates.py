@@ -16,6 +16,8 @@ def site(tmp_path, good):
     """複製一份 repository、放進範例文章並產生網站，回傳 (根目錄, dist)。"""
     root = tmp_path / "repo"
     shutil.copytree(ROOT, root, ignore=shutil.ignore_patterns(".git", "dist", "__pycache__", ".pytest_cache"))
+    for d in ("content/articles", "content/errata", "logs/daily"):
+        os.makedirs(root / d, exist_ok=True)  # 空資料夾不會進 git，這裡補上
     json.dump(good, open(root / "content" / "articles" / "T-0001.json", "w", encoding="utf8"), ensure_ascii=False)
     build.ROOT, build.DIST = str(root), str(root / "dist"); build.build()
     yield str(root), str(root / "dist")
