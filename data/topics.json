@@ -1,0 +1,206 @@
+{
+ "compiledAt": "2026-11-12",
+ "source": "docs/07_會計人實務問題前20名.md",
+ "topics": [
+  {
+   "rank": 1,
+   "question": "拿不到發票、只有收據或憑證缺漏，能不能入帳",
+   "freq": 3,
+   "official": 2,
+   "impact": 3,
+   "score": 8,
+   "category": "憑證",
+   "article_id": ""
+  },
+  {
+   "rank": 2,
+   "question": "發票開錯或退貨：要作廢還是開折讓，跨期怎麼辦",
+   "freq": 3,
+   "official": 3,
+   "impact": 2,
+   "score": 8,
+   "category": "營業稅",
+   "article_id": ""
+  },
+  {
+   "rank": 3,
+   "question": "進項扣抵出錯：重複扣抵、扣到別家公司的發票、作廢發票拿去扣",
+   "freq": 2,
+   "official": 3,
+   "impact": 3,
+   "score": 8,
+   "category": "營業稅",
+   "article_id": ""
+  },
+  {
+   "rank": 4,
+   "question": "各類所得扣繳與一月申報扣繳憑單",
+   "freq": 2,
+   "official": 3,
+   "impact": 3,
+   "score": 8,
+   "category": "所得稅",
+   "article_id": ""
+  },
+  {
+   "rank": 5,
+   "question": "內帳和外帳怎麼做、差異怎麼處理",
+   "freq": 3,
+   "official": 1,
+   "impact": 3,
+   "score": 7,
+   "category": "帳務",
+   "article_id": ""
+  },
+  {
+   "rank": 6,
+   "question": "月結與年結：費用估列、發票晚到、跨期費用",
+   "freq": 3,
+   "official": 2,
+   "impact": 2,
+   "score": 7,
+   "category": "結帳",
+   "article_id": ""
+  },
+  {
+   "rank": 7,
+   "question": "股東往來與老闆私人支出混進公司帳",
+   "freq": 2,
+   "official": 2,
+   "impact": 3,
+   "score": 7,
+   "category": "帳務",
+   "article_id": ""
+  },
+  {
+   "rank": 8,
+   "question": "交際費與餐費：進項不能扣、營所稅有上限",
+   "freq": 2,
+   "official": 3,
+   "impact": 2,
+   "score": 7,
+   "category": "稅務",
+   "article_id": ""
+  },
+  {
+   "rank": 9,
+   "question": "前任會計留下的爛帳、沒有交接、憑證不見",
+   "freq": 3,
+   "official": 1,
+   "impact": 2,
+   "score": 6,
+   "category": "帳務",
+   "article_id": ""
+  },
+  {
+   "rank": 10,
+   "question": "薪資、勞健保、勞退代扣的分錄與對帳",
+   "freq": 3,
+   "official": 1,
+   "impact": 2,
+   "score": 6,
+   "category": "薪資",
+   "article_id": ""
+  },
+  {
+   "rank": 11,
+   "question": "二代健保補充保費怎麼扣",
+   "freq": 2,
+   "official": 2,
+   "impact": 2,
+   "score": 6,
+   "category": "薪資",
+   "article_id": ""
+  },
+  {
+   "rank": 12,
+   "question": "買設備或修繕：列資產還是列費用",
+   "freq": 2,
+   "official": 2,
+   "impact": 2,
+   "score": 6,
+   "category": "稅務",
+   "article_id": ""
+  },
+  {
+   "rank": 13,
+   "question": "營業稅申報期限，沒有銷售額也要申報",
+   "freq": 1,
+   "official": 3,
+   "impact": 2,
+   "score": 6,
+   "category": "營業稅",
+   "article_id": ""
+  },
+  {
+   "rank": 14,
+   "question": "銀行調節表與存款對不起來",
+   "freq": 3,
+   "official": 1,
+   "impact": 1,
+   "score": 5,
+   "category": "結帳",
+   "article_id": ""
+  },
+  {
+   "rank": 15,
+   "question": "存貨盤點、盤損、成本結轉",
+   "freq": 2,
+   "official": 1,
+   "impact": 2,
+   "score": 5,
+   "category": "成本",
+   "article_id": ""
+  },
+  {
+   "rank": 16,
+   "question": "營所稅要用書審、查帳還是會計師簽證",
+   "freq": 2,
+   "official": 2,
+   "impact": 1,
+   "score": 5,
+   "category": "所得稅",
+   "article_id": ""
+  },
+  {
+   "rank": 17,
+   "question": "未分配盈餘加徵 5%",
+   "freq": 1,
+   "official": 2,
+   "impact": 2,
+   "score": 5,
+   "category": "所得稅",
+   "article_id": ""
+  },
+  {
+   "rank": 18,
+   "question": "外幣評價與匯兌損益",
+   "freq": 2,
+   "official": 1,
+   "impact": 1,
+   "score": 4,
+   "category": "帳務",
+   "article_id": ""
+  },
+  {
+   "rank": 19,
+   "question": "應收應付對帳與往來帳款",
+   "freq": 2,
+   "official": 1,
+   "impact": 1,
+   "score": 4,
+   "category": "帳務",
+   "article_id": ""
+  },
+  {
+   "rank": 20,
+   "question": "客戶或其他部門不給資料、資料一直拖",
+   "freq": 2,
+   "official": 1,
+   "impact": 1,
+   "score": 4,
+   "category": "工作流程",
+   "article_id": ""
+  }
+ ]
+}
