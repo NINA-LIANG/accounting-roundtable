@@ -1,0 +1,3 @@
+﻿同步時間,成功法規數,失敗法規數,條文總數,偵測到的異動數,失敗明細
+2026-11-12T01:10:20+0800,9,3,850,0,"[{""pcode"": ""G0340082"", ""error"": ""'NoneType' object has no attribute 'group'""}, {""pcode"": ""G0340051"", ""error"": ""<urlopen error [Errno 104] Connection reset by peer>""}, {""pcode"": ""J0080009"", ""error"": ""<urlopen error [Errno 104] Connection reset by peer>""}]"
+2026-11-12T01:11:24+0800,12,0,1118,0,

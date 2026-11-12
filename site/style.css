@@ -1,0 +1,28 @@
+/* 風格 C 深色數據台（docs/03b_版面樣式.md）。單一深色主題，刻意不隨系統切換。 */
+:root{--bg:#12181f;--panel:#1c252f;--line:#2e3c4a;--dash:#44566a;--fg:#e8edf2;--mut:#8f9daa;--accent:#ffd66b;--tag-bg:#243240;--tag-fg:#9fd3ff;--bad:#ff8a80;--good:#8be0a4;
+--sans:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;--mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:16px;line-height:1.75}
+a{color:var(--tag-fg)}a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.wrap{max-width:920px;margin:0 auto;padding:0 max(16px,env(safe-area-inset-right,0px)) 0 max(16px,env(safe-area-inset-left,0px))}
+header.top{border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;flex-wrap:wrap;gap:8px 20px;align-items:baseline;padding-block:14px}
+.brand{font-weight:700;font-size:1.15rem;color:var(--accent);text-decoration:none}
+nav{display:flex;flex-wrap:wrap;gap:4px 16px;font-size:.92rem}
+nav a{color:var(--mut);text-decoration:none}nav a[aria-current]{color:var(--fg);border-bottom:2px solid var(--accent)}
+main{padding-block:28px 56px;display:flex;flex-direction:column;gap:20px}
+h1{font-size:1.6rem;line-height:1.35;margin:0;color:var(--accent);text-wrap:balance}
+h2{font-size:1.15rem;margin:12px 0 0}h3{font-size:1rem;margin:8px 0 0}
+p{margin:0}.mut{color:var(--mut)}.mono{font-family:var(--mono);font-size:.85rem}
+.meta{display:flex;flex-wrap:wrap;gap:8px;font-family:var(--mono);font-size:.8rem;color:var(--mut)}
+.pill{background:var(--tag-bg);color:var(--tag-fg);padding:1px 10px;font-size:.78rem}
+.pill.bad{color:var(--bad)}.pill.good{color:var(--good)}
+.cite{background:var(--panel);border:1px dashed var(--dash);padding:10px 14px;font-family:var(--mono);font-size:.85rem;color:#c9d4de}
+.panel{background:var(--panel);border:1px solid var(--line);padding:16px;display:flex;flex-direction:column;gap:8px}
+.list{display:flex;flex-direction:column;gap:12px}
+.tw{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:.9rem;font-variant-numeric:tabular-nums}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}th{color:var(--mut);font-weight:500;white-space:nowrap}
+input[type=search]{width:100%;padding:10px 12px;background:var(--panel);border:1px solid var(--dash);color:var(--fg);font:inherit}
+ul,ol{margin:0;padding-left:1.4em}blockquote{margin:0;padding-left:12px;border-left:3px solid var(--dash);color:var(--mut)}
+code{font-family:var(--mono);font-size:.85em;background:var(--panel);padding:1px 5px}
+footer{border-top:1px solid var(--line);color:var(--mut);font-size:.85rem}footer .wrap{padding-block:18px}

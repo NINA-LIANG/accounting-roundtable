@@ -1,0 +1,23 @@
+name: 機器閘門
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  gates:
+    name: 機器閘門 G1–G13
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pytest
+      - name: 產生網站
+        run: python3 scripts/build.py
+      - name: 閘門測試（含故意弄壞的示範）
+        run: python3 -m pytest tests -q
+      - name: 對實際內容跑 13 道閘門
+        run: python3 scripts/gates.py
