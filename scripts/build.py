@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """把 docs/、data/、content/、logs/ 產生成靜態網站 dist/。只用 Python 標準函式庫。"""
-import csv, glob, html, json, os, re, shutil, sys
+import csv, glob, html, json, os, re, shutil, subprocess, sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DIST = os.path.join(ROOT, "dist")
 E = html.escape
@@ -75,7 +75,16 @@ def build():
     for l in idx["laws"]:
         d = json.load(open(os.path.join(ROOT, "data", "laws", l["pcode"] + ".json"), encoding="utf8")); laws[d["name"]] = d
     synced = idx["syncedAt"][:10]; total = sum(len(d["articles"]) for d in laws.values())
-    arts = [json.load(open(p, encoding="utf8")) for p in sorted(glob.glob(os.path.join(ROOT, "content", "articles", "*.json")), reverse=True)]
+    arts = []
+    for p in sorted(glob.glob(os.path.join(ROOT, "content", "articles", "*.json")), reverse=True):
+        a = json.load(open(p, encoding="utf8"))
+        if a.get("approved_at") == "以合併日為準":  # 本人以合併 Pull Request 核准；日期取該檔最後一次進入 main 的提交日
+            try:
+                d = subprocess.run(["git", "log", "-1", "--format=%cs", "--", p], cwd=ROOT, capture_output=True, text=True).stdout.strip()
+            except OSError:
+                d = ""
+            a["approved_at"] = d or "合併後產生"
+        arts.append(a)
 
     # 首頁
     cards = "".join(f'<div class="panel"><div class="meta"><span>{E(a["topic"])}</span><span>核准日 {E(a["approved_at"])}</span></div><h2><a href="articles/{E(a["id"])}.html">{E(a["title"])}</a></h2></div>' for a in arts) \
@@ -87,7 +96,7 @@ def build():
 
     # 文章頁
     for a in arts:
-        paras = "".join(f"<p>{inline(p)}</p>" for p in a["body"].split("\n") if p.strip())
+        paras = "".join("<p>" + re.sub(r"^(場景|為什麼|法條|不做會怎樣|小提醒)：", r"<strong>\1</strong>：", inline(p)) + "</p>" for p in a["body"].split("\n") if p.strip())
         cites = "".join(f'<div class="cite"><a href="{E(law_url(laws, c["law"], c["no"]))}">{E(c["law"])}第 {E(str(c["no"]))} 條</a>：「{E(c["quote"])}」</div>' for c in a["citations"])
         rows = "".join(f'<tr><td>{E(c["law"])}</td><td>第 {E(str(c["no"]))} 條</td></tr>' for c in a["citations"])
         page(f'articles/{a["id"]}.html', a["title"], f'''<div class="meta"><span>{E(a["topic"])}</span><span>同步日 {E(a["sync_date"])}</span></div>
