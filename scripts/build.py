@@ -184,7 +184,13 @@ q.addEventListener('input',render);
 <h2>法規異動</h2>{"<ul>" + ch_html + "</ul>" if ch_html else '<p class="mut">開始同步以來尚未偵測到條文異動。</p>'}''')
 
     # 勘誤
-    errs = [json.load(open(p, encoding="utf8")) for p in sorted(glob.glob(os.path.join(ROOT, "content", "errata", "*.json")))]
+    errs = []
+    for p in sorted(glob.glob(os.path.join(ROOT, "content", "errata", "*.json"))):
+        e = json.load(open(p, encoding="utf8"))
+        if e.get("fixed_at") == "以合併日為準":
+            d = subprocess.run(["git", "log", "-1", "--format=%cs", "--", p], cwd=ROOT, capture_output=True, text=True).stdout.strip()
+            e["fixed_at"] = d or "合併後產生"
+        errs.append(e)
     er = "".join(f'<div class="panel"><div class="meta"><span>{E(e["id"])}</span><span>更正日 {E(e["fixed_at"])}</span></div><p>原本：{E(e["was"])}</p><p>更正：{E(e["now"])}</p><p class="mut">依據：{E(e["basis"])}</p><p class="mut">因此新增的防護規則：{E(e["new_rule"])}</p></div>' for e in errs)
     page("errata.html", "勘誤", f'<h1>勘誤</h1><p class="mut">每一筆更正都會留在這裡，並寫明因此新增了哪一條防護規則。</p><div class="list">{er or "<p>目前沒有勘誤。</p>"}</div>')
 
