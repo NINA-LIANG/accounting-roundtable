@@ -13,9 +13,9 @@ def page(path, title, body, depth=0):
     nav = "".join(f'<a href="{up}{h}"{" aria-current=\"page\"" if h == path else ""}>{t}</a>' for h, t in NAV)
     out = f'''<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{E(title)}｜會計圓桌</title><link rel="stylesheet" href="{up}style.css"></head><body>
-<header class="top"><div class="wrap"><a class="brand" href="{up}index.html">會計圓桌</a><nav>{nav}</nav></div></header>
+<header class="top"><div class="wrap"><a class="brand" href="{up}index.html">✨ 會計圓桌</a><nav>{nav}</nav></div></header>
 <div class="wrap"><main>{body}</main></div>
-<footer><div class="wrap">本站內容為一般性說明，不是報稅代辦，不回答個別案件，也不等同專業意見。個案請洽會計師、記帳士，或國稅局免費服務專線 0800-000321。</div></footer>
+<footer><div class="wrap"><div>🐾 本站內容為一般性說明，不是報稅代辦，不回答個別案件，也不等同專業意見。個案請洽會計師、記帳士，或國稅局免費服務專線 0800-000321。</div></div></footer>
 </body></html>'''
     full = os.path.join(DIST, path); os.makedirs(os.path.dirname(full), exist_ok=True)
     open(full, "w", encoding="utf8").write(out)
@@ -86,13 +86,53 @@ def build():
             a["approved_at"] = d or "合併後產生"
         arts.append(a)
 
-    # 首頁
-    cards = "".join(f'<div class="panel"><div class="meta"><span>{E(a["topic"])}</span><span>核准日 {E(a["approved_at"])}</span></div><h2><a href="articles/{E(a["id"])}.html">{E(a["title"])}</a></h2></div>' for a in arts) \
-        or '<p class="mut">目前還沒有已核准的文章。每一篇都要通過機器閘門並由本人核准後才會出現在這裡。</p>'
-    page("index.html", "首頁", f'''<h1>每一句稅法說法，都點得回原文</h1>
-<p>會計圓桌寫給想用 AI 轉型的會計人。內容由七位 AI 員工協作產出，每篇發布前由本人核對，法規說法一律附條號與官方連結。</p>
-<div class="meta"><span class="pill">知識庫 {len(laws)} 部法規</span><span class="pill">{total:,} 條</span><span class="pill">同步日 {synced}</span></div>
-<h2>最新文章</h2><div class="list">{cards}</div>''')
+    # 首頁（風格 D 馬卡龍療癒風：扭蛋抽一篇、分類頁籤、拍立得卡片、愛心投票、人氣排行）
+    GROUPS = [("vat", "發票營業稅 🧾", {"營業稅", "憑證"}, "🧾"), ("tax", "所得稅扣繳 💰", {"所得稅", "稅務"}, "💰"),
+              ("pay", "薪資勞健保 🍙", {"勞保", "薪資"}, "🍙"), ("book", "帳務結帳 📒", {"帳務", "結帳", "成本"}, "📒")]
+    def grp(t):
+        for k, _, ts, ic in GROUPS:
+            if t in ts: return k, ic
+        return "book", "📒"
+    cards, data = [], []
+    for a in arts:
+        k, ic = grp(a["topic"]); c0 = a["citations"][0]
+        cards.append(f'''<article class="card c-{k}" data-id="{E(a["id"])}" data-g="{k}"><div class="photo" aria-hidden="true">{ic}</div>
+<div class="meta"><span class="pill">{E(a["topic"])}</span><span>核准 {E(a["approved_at"])}</span></div>
+<h3><a href="articles/{E(a["id"])}.html">{E(a["title"])}</a></h3><p class="mut" style="font-size:.84rem">📌 {E(c0["law"])}第 {E(str(c0["no"]))} 條</p>
+<div class="row"><button class="btn vote" type="button" data-id="{E(a["id"])}">❤ 實用一票</button><span class="count" data-c="{E(a["id"])}">0 票</span></div></article>''')
+        data.append({"id": a["id"], "t": a["title"], "g": k, "topic": a["topic"]})
+    tabs = '<button class="btn tab" type="button" data-g="all" aria-pressed="true">全部 📚</button>' + "".join(f'<button class="btn tab" type="button" data-g="{k}" aria-pressed="false">{E(n)}</button>' for k, n, _, _ in GROUPS)
+    grid = "".join(cards) or '<p class="mut">目前還沒有已核准的文章。每一篇都要通過機器閘門並由本人核准後才會出現在這裡。</p>'
+    page("index.html", "首頁", f'''<section class="panel hero"><h1>✨ 會計圓桌 ✨</h1>
+<p>今天的會計小知識，決定權交給你！🐾</p>
+<p class="mut" style="font-size:.9rem">每一句稅法說法都點得回原文 · 知識庫 {len(laws)} 部法規、{total:,} 條 · 同步日 {synced}</p>
+<button class="btn" type="button" id="gacha">🎲 今天學什麼？（隨機抽籤扭蛋）</button></section>
+<div class="tabs" role="group" aria-label="文章分類">{tabs}</div>
+<div class="layout"><div class="grid" id="grid">{grid}</div>
+<aside class="panel rank" aria-labelledby="rk"><h2 id="rk">👑 人氣排行</h2><ol id="top"></ol>
+<p class="mut" style="font-size:.8rem">票數只存在你這台裝置的瀏覽器，不會上傳，也不代表其他讀者。</p></aside></div>
+<dialog id="dlg"><div class="bubble"><div class="mascot" aria-hidden="true">🐰</div><p class="say" id="say"></p><p><strong id="pick"></strong></p>
+<div class="actions"><a class="btn go" id="go" href="#">去看這篇 ✨</a><button class="btn again" type="button" id="again">再抽一次 🎲</button><button class="btn close" type="button" id="close">先不要</button></div></div></dialog>
+<div class="toast" id="toast" role="status"></div>
+<script>
+const ARTS={json.dumps(data, ensure_ascii=False)};
+const LINES={{vat:["發票的事搞懂了，報營業稅就不慌 🧾","打統編之前先想想這篇 ✨","今天就把作廢和折讓分清楚吧 🍰"],tax:["所得稅的細節，今天補一點 💰","申報季前先複習，心裡比較踏實 🍵","數字算清楚，主管問了也不怕 👑"],pay:["薪資和勞健保，員工最在意的事 🍙","每月核對一次，少一點加班 💖","今天幫同事把錢算對吧 🐾"],book:["帳記得真實，報表才看得懂 📒","月結前先看這篇，結帳更順 ✨","這題 FP&A 也天天用得到 🍵"]}};
+const KEY='roundtable-votes';let V={{}};try{{V=JSON.parse(localStorage.getItem(KEY)||'{{}}')}}catch(e){{}}
+const save=()=>{{try{{localStorage.setItem(KEY,JSON.stringify(V))}}catch(e){{}}}};
+const $=s=>document.querySelector(s),esc=s=>s.replace(/[&<>"]/g,c=>({{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}}[c]));
+function counts(){{document.querySelectorAll('[data-c]').forEach(e=>e.textContent=(V[e.dataset.c]||0)+' 票')}}
+function rank(){{const m=['👑','🥇','🥈','🥉'];const r=ARTS.filter(a=>V[a.id]).sort((a,b)=>V[b.id]-V[a.id]).slice(0,3);
+ $('#top').innerHTML=r.length?r.map((a,i)=>'<li><span class="medal">'+m[i+1]+'</span><span><a href="articles/'+a.id+'.html">'+esc(a.t)+'</a><br><span class="count">'+V[a.id]+' 票</span></span></li>').join(''):'<li><span class="medal">'+m[0]+'</span><span>還沒有人投票，幫最實用的那篇投下第一票吧！</span></li>'}}
+function toast(t){{const e=$('#toast');e.textContent=t;e.classList.add('show');clearTimeout(e._t);e._t=setTimeout(()=>e.classList.remove('show'),1400)}}
+function hearts(x,y){{for(let i=0;i<6;i++){{const h=document.createElement('span');h.className='heart';h.textContent=['💖','✨','❤'][i%3];h.style.left=(x-10+Math.random()*30)+'px';h.style.top=(y-10)+'px';h.style.setProperty('--dx',(Math.random()*80-40)+'px');h.style.animationDelay=(i*60)+'ms';document.body.appendChild(h);setTimeout(()=>h.remove(),1400)}}}}
+document.querySelectorAll('.vote').forEach(b=>b.addEventListener('click',e=>{{const id=b.dataset.id;V[id]=(V[id]||0)+1;save();counts();rank();
+ b.classList.remove('pop');void b.offsetWidth;b.classList.add('pop');const r=b.getBoundingClientRect();hearts(r.left+r.width/2,r.top);toast('投票成功！🎉')}}));
+document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>{{document.querySelectorAll('.tab').forEach(x=>x.setAttribute('aria-pressed',x===t));
+ document.querySelectorAll('.card').forEach(c=>c.hidden=!(t.dataset.g==='all'||c.dataset.g===t.dataset.g))}}));
+function draw(){{if(!ARTS.length)return;const a=ARTS[Math.floor(Math.random()*ARTS.length)],l=LINES[a.g];$('#say').textContent=l[Math.floor(Math.random()*l.length)];$('#pick').textContent=a.t;$('#go').href='articles/'+a.id+'.html'}}
+$('#gacha').addEventListener('click',()=>{{draw();$('#dlg').showModal()}});$('#again').addEventListener('click',draw);$('#close').addEventListener('click',()=>$('#dlg').close());
+counts();rank();
+</script>''')
 
     # 文章頁
     for a in arts:
