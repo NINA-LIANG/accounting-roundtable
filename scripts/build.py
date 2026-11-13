@@ -167,11 +167,30 @@ q.addEventListener('input',render);
     done = {a["id"]: a["title"] for a in arts}
     trs = "".join(f'<tr><td>{t["rank"]}</td><td>{E(t["question"])}</td><td>{E(t["category"])}</td><td>{t["freq"]}</td><td>{t["official"]}</td><td>{t["impact"]}</td><td>{t["score"]}</td><td>' +
                   (f'<a href="articles/{E(t["article_id"])}.html">已有文章</a>' if t.get("article_id") in done else '<span class="mut">尚未寫成文章</span>') + "</td></tr>" for t in tp["topics"])
+    qd = json.load(open(os.path.join(ROOT, "data", "questions.json"), encoding="utf8")); qs = qd["items"]
+    r2a = {t["rank"]: t.get("article_id") for t in tp["topics"] if t.get("article_id") in done}
+    cats = {}
+    for q in qs: cats.setdefault(q["category"], []).append(q)
+    def qrow(q):
+        m = re.match(r"07 第 (\d+) 名", q.get("doc", "")); aid = r2a.get(int(m.group(1))) if m else None
+        if aid: tag = f'<a class="pill good" href="articles/{E(aid)}.html">已有文章</a>'
+        elif q["status"] == "已整理": tag = '<span class="pill">已整理，待寫成文章</span>'
+        else: tag = '<span class="pill bad">整理中</span>'
+        head = f'<span class="mono mut">{E(q["id"])}</span> {E(q["question"])} {tag}'
+        if q.get("discussion") or q.get("sources"):
+            src = "".join(f'<li><a href="{E(x["url"])}" rel="nofollow noopener">{E(x["title"])}</a></li>' for x in q.get("sources", []))
+            return f'<li><details><summary>{head}</summary><p><strong>大家在討論什麼</strong>：{E(q.get("discussion", ""))}</p>' + (f'<p class="mut">來源：</p><ul>{src}</ul>' if src else "") + '</details></li>'
+        return f'<li>{head}</li>'
+    qhtml = "".join(f'<div class="panel"><h3>{E(c)}（{len(v)}）</h3><ul class="qs">{"".join(qrow(q) for q in v)}</ul></div>' for c, v in cats.items())
     page("topics.html", "實務問題", f'''<h1>會計人實務問題前 20 名</h1>
 <p>這是會計圓桌的選題池：台灣會計人在論壇、社群與官方宣導裡最常遇到的 20 個實務問題。每一題之後會寫成附法規出處的文章，經本人核准後才會上線。</p>
 <div class="tw"><table><tr><th>名次</th><th>問題</th><th>類別</th><th>討論頻度</th><th>官方點名</th><th>出錯後果</th><th>總分</th><th>文章</th></tr>{trs}</table></div>
 <h2>怎麼排名的</h2><p>以關鍵字搜尋 PTT、Dcard、Mobile01、Threads、事務所部落格與財政部、國稅局、健保署宣導頁，約 20 組搜尋、200 筆結果。每題依討論頻度、官方點名、出錯後果各給 1 到 3 分，滿分 9 分。整理日期 {E(tp["compiledAt"])}。</p>
-<p class="mut">限制：這是有依據的估計排名，不是統計抽樣。許多論壇文章是 2015 到 2023 年的舊文，搜尋引擎的排序也會影響看到哪些文章。</p>''')
+<p class="mut">限制：這是有依據的估計排名，不是統計抽樣。許多論壇文章是 2015 到 2023 年的舊文，搜尋引擎的排序也會影響看到哪些文章。</p>
+<h2 id="all">全部實務問題總表（{len(qs)} 題）</h2>
+<p>除了前 20 名，這裡列出會計人討論過的所有實務問題，依類別分組。標「整理中」的題目只放問題、討論摘要（改寫，不是原文轉貼）和來源連結，<strong>還沒有經過法規核對，不是解答</strong>；寫成文章並經本人核准後才會有結論。</p>
+<p class="mut">說明：PTT 與中小企業財會諮詢服務網的討論區不允許自動擷取，這次沒有重新計次，前 20 名仍是估計排名。整理日期 {E(qd["generated"])}。</p>
+{qhtml}''')
 
     # 資料來源與同步紀錄
     src = [["編號", "法規", "最新修正日期", "條數", "官方連結"]] + [[f"SRC-{n:03d}", l["name"], l["amended"], str(l["count"]), l["source"]] for n, l in enumerate(idx["laws"], 1)]

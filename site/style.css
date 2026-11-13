@@ -70,3 +70,7 @@ dialog::backdrop{background:rgba(74,59,50,.35)}
 .bubble .actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
 .bubble .go{background:var(--matcha)}.bubble .again{background:var(--sky)}.bubble .close{background:#f3e9e4}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.card{transform:none!important}}
+.qs{list-style:none;padding:0;display:flex;flex-direction:column;gap:8px}
+.qs li{background:#fff7f2;border-radius:var(--r-s);padding:8px 12px}
+.qs summary{cursor:pointer}.qs details p,.qs details ul{margin-top:6px;font-size:.92rem}
+.qs .pill{margin-left:4px;text-decoration:none}
