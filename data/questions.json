@@ -1,0 +1,715 @@
+{
+ "generated": "2026-11-13",
+ "count": 63,
+ "items": [
+  {
+   "id": "P001",
+   "category": "憑證與發票",
+   "question": "拿不到發票、只有收據或憑證缺漏，能不能入帳",
+   "status": "已整理",
+   "doc": "07 第 1 名"
+  },
+  {
+   "id": "P002",
+   "category": "憑證與發票",
+   "question": "發票開錯或退貨：作廢還是開折讓，跨期怎麼辦",
+   "status": "已整理",
+   "doc": "07 第 2 名"
+  },
+  {
+   "id": "P003",
+   "category": "營業稅",
+   "question": "進項扣抵出錯（交際、自用車、統編錯誤）",
+   "status": "已整理",
+   "doc": "07 第 3 名"
+  },
+  {
+   "id": "P004",
+   "category": "扣繳",
+   "question": "各類所得扣繳與一月申報扣繳憑單",
+   "status": "已整理",
+   "doc": "07 第 4 名、10 第四節"
+  },
+  {
+   "id": "P005",
+   "category": "內外帳",
+   "question": "內帳和外帳怎麼做、差異怎麼處理",
+   "status": "已整理",
+   "doc": "07 第 5 名"
+  },
+  {
+   "id": "P006",
+   "category": "月結年結",
+   "question": "費用估列、發票晚到、跨期費用",
+   "status": "已整理",
+   "doc": "07 第 6 名"
+  },
+  {
+   "id": "P007",
+   "category": "股東與老闆",
+   "question": "股東往來與老闆私人支出混進公司帳",
+   "status": "已整理",
+   "doc": "07 第 7 名"
+  },
+  {
+   "id": "P008",
+   "category": "費用",
+   "question": "交際費與餐費：進項不能扣、營所稅有上限",
+   "status": "已整理",
+   "doc": "07 第 8 名"
+  },
+  {
+   "id": "P009",
+   "category": "交接",
+   "question": "前任會計留下的爛帳、沒有交接、憑證不見",
+   "status": "已整理",
+   "doc": "07 第 9 名"
+  },
+  {
+   "id": "P010",
+   "category": "薪資與保險",
+   "question": "薪資、勞健保、勞退代扣的分錄與對帳",
+   "status": "已整理",
+   "doc": "07 第 10 名"
+  },
+  {
+   "id": "P011",
+   "category": "薪資與保險",
+   "question": "二代健保補充保費怎麼扣",
+   "status": "已整理",
+   "doc": "07 第 11 名"
+  },
+  {
+   "id": "P012",
+   "category": "資產",
+   "question": "買設備或修繕，列資產還是列費用",
+   "status": "已整理",
+   "doc": "07 第 12 名"
+  },
+  {
+   "id": "P013",
+   "category": "營業稅",
+   "question": "營業稅申報期限，沒有銷售額也要申報",
+   "status": "已整理",
+   "doc": "07 第 13 名"
+  },
+  {
+   "id": "P014",
+   "category": "月結年結",
+   "question": "銀行調節表與存款對不起來",
+   "status": "已整理",
+   "doc": "07 第 14 名"
+  },
+  {
+   "id": "P015",
+   "category": "存貨成本",
+   "question": "存貨盤點、盤損、成本結轉",
+   "status": "已整理",
+   "doc": "07 第 15 名"
+  },
+  {
+   "id": "P016",
+   "category": "營所稅",
+   "question": "營所稅用書審、查帳還是會計師簽證",
+   "status": "已整理",
+   "doc": "07 第 16 名"
+  },
+  {
+   "id": "P017",
+   "category": "營所稅",
+   "question": "未分配盈餘加徵 5%",
+   "status": "已整理",
+   "doc": "07 第 17 名"
+  },
+  {
+   "id": "P018",
+   "category": "外幣",
+   "question": "外幣評價與匯兌損益",
+   "status": "已整理",
+   "doc": "07 第 18 名"
+  },
+  {
+   "id": "P019",
+   "category": "應收應付",
+   "question": "應收應付對帳與往來帳款",
+   "status": "已整理",
+   "doc": "07 第 19 名"
+  },
+  {
+   "id": "P020",
+   "category": "職場",
+   "question": "客戶或其他部門不給資料、資料一直拖",
+   "status": "已整理",
+   "doc": "07 第 20 名"
+  },
+  {
+   "id": "P021",
+   "category": "外籍移工",
+   "question": "居住者還是非居住者、6% 還是 18%、10 日內繳",
+   "status": "已整理",
+   "doc": "08 第 1–3 題"
+  },
+  {
+   "id": "P022",
+   "category": "外籍移工",
+   "question": "年中身分改變、離境前申報",
+   "status": "已整理",
+   "doc": "08 第 4–5 題"
+  },
+  {
+   "id": "P023",
+   "category": "外籍移工",
+   "question": "加班費、膳宿費、仲介費能不能從薪水扣",
+   "status": "已整理",
+   "doc": "08 第 6–7 題"
+  },
+  {
+   "id": "P024",
+   "category": "外籍移工",
+   "question": "就業安定費、勞健保、勞退、扣繳憑單",
+   "status": "已整理",
+   "doc": "08 第 8–10 題"
+  },
+  {
+   "id": "P025",
+   "category": "應收應付",
+   "question": "401 銷售額和帳上收入對不起來：收入調節表",
+   "status": "已整理",
+   "doc": "09 第二節"
+  },
+  {
+   "id": "P026",
+   "category": "應收應付",
+   "question": "預付保險費、預付租金、其他預付費用",
+   "status": "已整理",
+   "doc": "09 第三節"
+  },
+  {
+   "id": "P027",
+   "category": "資產",
+   "question": "折舊：帳上和稅上的差異",
+   "status": "已整理",
+   "doc": "10 第一節"
+  },
+  {
+   "id": "P028",
+   "category": "委外",
+   "question": "外帳給會計師還是記帳士事務所，差在哪",
+   "status": "已整理",
+   "doc": "10 第二節"
+  },
+  {
+   "id": "P029",
+   "category": "薪資與保險",
+   "question": "薪資低報（投保薪資、申報所得）的風險",
+   "status": "已整理",
+   "doc": "10 第三節"
+  },
+  {
+   "id": "P030",
+   "category": "營業稅",
+   "question": "各行業可以扣抵的進項",
+   "status": "已整理",
+   "doc": "10 第五節"
+  },
+  {
+   "id": "P031",
+   "category": "印花稅",
+   "question": "廣告、工程承攬合約要貼印花稅",
+   "status": "已整理",
+   "doc": "11 第一節"
+  },
+  {
+   "id": "P032",
+   "category": "營所稅",
+   "question": "9 月暫繳",
+   "status": "已整理",
+   "doc": "11 第二節"
+  },
+  {
+   "id": "P033",
+   "category": "管理會計",
+   "question": "內帳每月預估收入費用、和去年同期比較",
+   "status": "已整理",
+   "doc": "11 第三節"
+  },
+  {
+   "id": "P034",
+   "category": "扣繳",
+   "question": "所得格式代號 50、9A、9B、92、53、51 怎麼選",
+   "status": "已整理",
+   "doc": "11 第四節"
+  },
+  {
+   "id": "P035",
+   "category": "薪資與保險",
+   "question": "每月核對勞保、健保、勞退有沒有多扣少扣",
+   "status": "已整理",
+   "doc": "12（附 Excel）"
+  },
+  {
+   "id": "P036",
+   "category": "觀念",
+   "question": "各項例行工作為什麼要做、依據哪條、不做會怎樣",
+   "status": "已整理",
+   "doc": "13"
+  },
+  {
+   "id": "P037",
+   "category": "費用",
+   "question": "員工出差報支資料不足、旅費被剔除",
+   "status": "已整理",
+   "doc": "14（附 Excel）"
+  },
+  {
+   "id": "P038",
+   "category": "費用",
+   "question": "呆帳損失哪一年可以認列、要準備什麼證明",
+   "status": "新增：只有討論摘要，解法待審",
+   "discussion": "爭點是認列年度不能自己挑，以及債權收不回的原因不同，要附的證明（存證信函、法院文件等）也不同。另有人問能不能用前 3 年實際呆帳比率估列備抵呆帳。",
+   "sources": [
+    {
+     "title": "財政部各地區國稅局審查營利事業呆帳損失認定原則（rootlaw.com.tw）",
+     "url": "https://www.rootlaw.com.tw/LawBasis.aspx?LawID=A040070051031200-0990415"
+    },
+    {
+     "title": "經濟日報〈企業列呆帳損失 依不同情況備妥證明〉",
+     "url": "https://money.udn.com/money/story/6710/9160308"
+    },
+    {
+     "title": "hccpa.com.tw〈得以前 3 年實際發生呆帳比率估列備抵呆帳〉",
+     "url": "https://www.hccpa.com.tw/archives/1045/%E7%87%9F%E5%88%A9%E4%BA%8B%E6%A5%AD%E5%BE%97%E4%BB%A5%E5%89%8D3%E5%B9%B4%E5%AF%A6%E9%9A%9B%E7%99%BC%E7%94%9F%E5%91%86%E5%B8%B3%E6%AF%94%E7%8E%87%E4%BC%B0%E5%88%97%E5%82%99%E6%8A%B5%E5%91%86%E5%B8%B3/"
+    }
+   ]
+  },
+  {
+   "id": "P039",
+   "category": "費用",
+   "question": "零用金怎麼管、員工代墊款記什麼科目",
+   "status": "新增：只有討論摘要，解法待審",
+   "discussion": "常見疑問是定額零用金的補充分錄，以及員工先墊錢再報帳時，要記其他應付款還是員工往來。",
+   "sources": [
+    {
+     "title": "鼎新 A1〈員工代墊款報帳，帳款該如何記？〉",
+     "url": "https://a1.digiwin.com/essay/essay-content.php?detail=1524"
+    },
+    {
+     "title": "鼎新 A1〈定額零用金制度介紹與會計處理〉",
+     "url": "https://a1.digiwin.com/essay/essay-content.php?detail=957"
+    }
+   ]
+  },
+  {
+   "id": "P040",
+   "category": "費用",
+   "question": "職工福利金、尾牙、員工旅遊怎麼入帳，要不要列員工所得",
+   "status": "新增：只有討論摘要，解法待審",
+   "discussion": "討論集中在尾牙費用能不能用福利金支付、抽獎獎品要不要扣繳申報、員工旅遊在什麼情況下要列員工所得。",
+   "sources": [
+    {
+     "title": "中小企業財會諮詢服務網〈【會計處理】職工福利〉",
+     "url": "https://accounting.sme.gov.tw/run.php?name=forum&file=post&p=1185"
+    },
+    {
+     "title": "經濟日報〈企業列報尾牙帳款 三點留意〉",
+     "url": "https://money.udn.com/money/story/6710/4271553"
+    },
+    {
+     "title": "cpacorey.com〈員工旅遊要列所得嗎？〉",
+     "url": "https://cpacorey.com/employeetravel/"
+    }
+   ]
+  },
+  {
+   "id": "P041",
+   "category": "營業稅",
+   "question": "外銷零稅率怎麼申報、要附哪些文件",
+   "status": "新增：只有討論摘要，解法待審",
+   "discussion": "有人問出口報單怎麼報營業稅；也有人問透過電商或三角貿易出口時，零稅率要附哪些證明文件。",
+   "sources": [
+    {
+     "title": "中小企業財會諮詢服務網〈【報稅實務】出口報單怎麼報營業稅?〉",
+     "url": "https://accounting.sme.gov.tw/run.php?name=forum&file=post&p=531923"
+    },
+    {
+     "title": "bestcheng.com.tw〈三角貿易之零稅率申報實務〉",
+     "url": "https://www.bestcheng.com.tw/modules/tad_book3/html_all.php?tbsn=4"
+    }
+   ]
+  },
+  {
+   "id": "P042",
+   "category": "收入",
+   "question": "電商平台（蝦皮等）收入、手續費、代開發票怎麼記帳",
+   "status": "新增：只有討論摘要，解法待審",
+   "discussion": "爭點是收入要用成交總額還是扣掉平台手續費後的淨額認列、平台開的手續費發票怎麼處理，以及分錄怎麼做。",
+   "sources": [
+    {
+     "title": "中小企業財會諮詢服務網〈【會計處理】電商平台與分錄〉",
+     "url": "https://accounting.sme.gov.tw/run.php?file=post&name=forum&p=533539"
+    },
+    {
+     "title": "excelcpa.com.tw〈電商報稅怎麼做？〉",
+     "url": "https://content.excelcpa.com.tw/1519/"
+    }
+   ]
+  },
+  {
+   "id": "P043",
+   "category": "月結年結",
+   "question": "年終獎金年底還沒發，能不能估列當年度費用",
+   "status": "新增：只有討論摘要，解法待審",
+   "discussion": "新聞報導有公司估列年終獎金，被國稅局補稅約 240 萬元；討論集中在估列要有什麼依據，以及哪一年可以認列。",
+   "sources": [
+    {
+     "title": "經濟日報〈年終獎金還沒發也能列費用？公司誤踩地雷補稅240萬元〉",
+     "url": "https://money.udn.com/money/story/6710/9569727"
+    },
+    {
+     "title": "中小企業財會諮詢服務網〈【會計處理】年終獎金〉",
+     "url": "https://accounting.sme.gov.tw/run.php?name=forum&file=post&p=154176"
+    },
+    {
+     "title": "中小企業財會諮詢服務網〈【會計處理】年底暫估費用認列〉",
+     "url": "https://accounting.sme.gov.tw/run.php?name=forum&file=post&p=535499"
+    }
+   ]
+  },
+  {
+   "id": "P044",
+   "category": "資產",
+   "question": "公司車：油資、停車費進項能不能扣，高價車折舊上限",
+   "status": "新增：只有討論摘要，解法待審",
+   "discussion": "討論集中在乘人小客車的進項不能扣抵、高價車的折舊有上限，以及私車公用的費用能不能列。",
+   "sources": [
+    {
+     "title": "中小企業財會諮詢服務網〈【會計處理】非公司用車費用〉",
+     "url": "https://accounting.sme.gov.tw/run.php?file=post&name=forum&p=536398"
+    },
+    {
+     "title": "redpointcenter.com.tw〈公司買車的三道限制，分屬三部法律〉",
+     "url": "https://www.redpointcenter.com.tw/company-vehicle-expense/"
+    }
+   ]
+  },
+  {
+   "id": "P045",
+   "category": "準則",
+   "question": "中小企業租廠房，要不要認列使用權資產（IFRS 16／企業會計準則）",
+   "status": "新增：只有討論摘要，解法待審",
+   "discussion": "爭點是適用 IFRS 16 或企業會計準則的公司，長期租約要不要列使用權資產和租賃負債。",
+   "sources": [
+    {
+     "title": "中小企業財會諮詢服務網〈【會計處理】中小企業租工廠廠房,要認列使用權資產嗎?〉",
+     "url": "https://accounting.sme.gov.tw/run.php?name=forum&file=post&p=571239"
+    },
+    {
+     "title": "中小企業財會諮詢服務網〈【會計處理】租賃資產及租賃負債〉",
+     "url": "https://accounting.sme.gov.tw/run.php?name=forum&file=post&p=533849"
+    }
+   ]
+  },
+  {
+   "id": "P046",
+   "category": "股東與老闆",
+   "question": "股東借錢給公司或向公司借錢，要不要設算利息",
+   "status": "新增：只有討論摘要，解法待審",
+   "discussion": "有人問股東往來在借方時要不要設算利息；也有人問內外帳差額能不能掛股東往來。（補充 07 第 7 名）",
+   "sources": [
+    {
+     "title": "中小企業財會諮詢服務網〈【會計處理】借方的股東往來是否也要設算利息?〉",
+     "url": "https://accounting.sme.gov.tw/run.php?file=post&name=forum&p=571394"
+    },
+    {
+     "title": "中小企業財會諮詢服務網〈【會計處理】內外帳差額入股東往來〉",
+     "url": "https://accounting.sme.gov.tw/run.php?name=forum&file=post&p=533721"
+    },
+    {
+     "title": "中小企業財會諮詢服務網〈【會計處理】股東借款〉",
+     "url": "https://accounting.sme.gov.tw/run.php?file=post&name=forum&p=536344"
+    }
+   ]
+  },
+  {
+   "id": "P047",
+   "category": "存貨成本",
+   "question": "存貨報廢、盤損要準備什麼證明才能認列損失",
+   "status": "新增：只有討論摘要，解法待審",
+   "discussion": "新聞整理了商品盤損的三種證明方式；另有討論報廢流程要怎麼走，損失才會被認列。（補充 07 第 15 名）",
+   "sources": [
+    {
+     "title": "工商時報〈商品盤損抵稅 證明方式三擇一〉",
+     "url": "https://www.ctee.com.tw/news/20210107700914-439901"
+    },
+    {
+     "title": "經濟日報〈認列報廢損失 須備妥證明〉",
+     "url": "https://money.udn.com/money/story/6710/9122744"
+    }
+   ]
+  },
+  {
+   "id": "P048",
+   "category": "扣繳",
+   "question": "有正職又兼職，執行業務所得的代號怎麼選（9A／9B／50）",
+   "status": "新增：只有討論摘要，解法待審",
+   "discussion": "常見疑問是兼職、接案要報薪資（50）還是執行業務（9A、9B），以及執行業務報酬的業別代號怎麼選。（補充 11 第四節）",
+   "sources": [
+    {
+     "title": "中小企業財會諮詢服務網〈【報稅實務】如果本身有正職的情況下，其他兼職要怎麼選執行業務所得的編號?〉",
+     "url": "https://accounting.sme.gov.tw/run.php?name=forum&file=post&p=570376"
+    },
+    {
+     "title": "104 職場力〈接案族該如何報稅？〉",
+     "url": "https://blog.104.com.tw/how-to-freelancer-file-taxes/"
+    }
+   ]
+  },
+  {
+   "id": "P049",
+   "category": "營業稅",
+   "question": "進口報單上海關代徵的營業稅怎麼扣抵，報關費、運費怎麼入帳",
+   "status": "新增：只有討論摘要，解法待審",
+   "discussion": "討論集中在進口報單哪些欄位可以當進項憑證，以及關稅、報關費、運費要不要計入存貨成本。",
+   "sources": [
+    {
+     "title": "中小企業財會諮詢服務網〈【報稅實務】進口憑証發票〉",
+     "url": "https://accounting.sme.gov.tw/run.php?name=forum&file=post&p=568041"
+    },
+    {
+     "title": "中小企業財會諮詢服務網〈【會計處理】稅務與成本〉",
+     "url": "https://0800056476.sme.gov.tw/accounting/run.php?name=forum&file=post&p=531043"
+    }
+   ]
+  },
+  {
+   "id": "P050",
+   "category": "營業稅",
+   "question": "向境外電商買電子勞務（雲端軟體、廣告），營業稅要自己報繳嗎",
+   "status": "新增：只有討論摘要，解法待審",
+   "discussion": "國稅局提醒，境內買受人要取得雲端發票，兼營營業人則要申報購買國外勞務；討論集中在不同身分的公司各自該怎麼做。",
+   "sources": [
+    {
+     "title": "財政部賦稅署〈提醒購買境外電商電子勞務之境內買受人取得雲端發票或自行報繳營業稅事宜〉",
+     "url": "https://www.dot.gov.tw/singlehtml/ch26?cntId=fd3727a850f94269ba008bf5b30dde0d"
+    },
+    {
+     "title": "臺北國稅局〈兼營營業人向境外電商購買電子勞務，應申報購買國外勞務〉",
+     "url": "https://www.ntbt.gov.tw/singlehtml/41ae3594197f4f69b47753ce08188516?cntId=154b404429a74b60b77d7e71e1d25085"
+    }
+   ]
+  },
+  {
+   "id": "P051",
+   "category": "營所稅",
+   "question": "研發投資抵減（產業創新條例）怎麼申請、期限是什麼",
+   "status": "新增：只有討論摘要，解法待審",
+   "discussion": "討論集中在申請時程和應備文件，錯過期限就會喪失抵減。",
+   "sources": [
+    {
+     "title": "勤業眾信〈研發投抵應注意申請程序及適用之條件〉",
+     "url": "https://www.deloitte.com/tw/tc/services/tax/perspectives/internal-tax-update-2503-3.html"
+    },
+    {
+     "title": "EY〈產業創新條例第10-1條投資抵減申辦規定及實務簡介〉",
+     "url": "https://www.ey.com/zh_tw/insights/financial-services/statute-for-industrial-innovation-article-10-1"
+    }
+   ]
+  },
+  {
+   "id": "P052",
+   "category": "薪資與保險",
+   "question": "特休未休工資、資遣費：要不要課稅、算不算平均工資",
+   "status": "新增：只有討論摘要，解法待審",
+   "discussion": "爭點是特休未休折發的工資要不要課所得稅、要不要計入投保薪資和平均工資。",
+   "sources": [
+    {
+     "title": "518 熊報〈特休換錢如何計算？〉",
+     "url": "https://www.518.com.tw/article/1534"
+    },
+    {
+     "title": "財政部稅務入口網〈營利事業列報薪資支出，其總額包括那些項目？〉",
+     "url": "https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/profit-seeking-enterprise-income-tax/operating-expense-calculation/D6kAGRG"
+    }
+   ]
+  },
+  {
+   "id": "P053",
+   "category": "營所稅",
+   "question": "公司解散、清算時，帳務和稅務要申報什麼",
+   "status": "新增：只有討論摘要，解法待審",
+   "discussion": "討論集中在解散後要辦的決算申報、清算申報和期限。",
+   "sources": [
+    {
+     "title": "經濟部 smepass〈公司解散說明〉",
+     "url": "https://smepass.adi.gov.tw/biz/showPage?lang=cht&search=GBE400002"
+    },
+    {
+     "title": "wanchicpa.com.tw〈營利事業解散應辦理決、清算申報期限〉",
+     "url": "https://www.wanchicpa.com.tw/%E7%87%9F%E5%88%A9%E4%BA%8B%E6%A5%AD%E8%A7%A3%E6%95%A3%E6%87%89%E8%BE%A6%E7%90%86%E6%B1%BA%E3%80%81%E6%B8%85%E7%AE%97%E7%94%B3%E5%A0%B1%E6%9C%9F%E9%99%90/"
+    }
+   ]
+  },
+  {
+   "id": "P054",
+   "category": "費用",
+   "question": "公司捐贈可以列報多少",
+   "status": "新增：只有討論摘要，解法待審",
+   "discussion": "討論集中在捐贈的列報限額，以及實物捐贈怎麼入帳。",
+   "sources": [
+    {
+     "title": "財政部稅務入口網〈營利事業列報捐贈之限額如何規定？〉",
+     "url": "https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/profit-seeking-enterprise-income-tax/operating-expense-calculation/eWKGj28"
+    }
+   ]
+  },
+  {
+   "id": "P055",
+   "category": "憑證與發票",
+   "question": "跨年度銷貨退回、折讓，營業稅和營所稅怎麼處理",
+   "status": "新增：只有討論摘要，解法待審",
+   "discussion": "爭點是折讓要在當期還是次期扣減銷項，以及跨年度退回時，營所稅收入算哪一年。（補充 07 第 2 名）",
+   "sources": [
+    {
+     "title": "瑞鼎會計師事務所〈營業人發生銷貨退回或折讓，應於事實發生之當期或次期申報營業稅〉",
+     "url": "https://www.rdcpa.com.tw/news-detail-3319751.html"
+    },
+    {
+     "title": "udn 部落格〈跨年度之銷貨退回應如何申報營利事業所得稅？〉",
+     "url": "https://blog.udn.com/c035316162/7758556"
+    }
+   ]
+  },
+  {
+   "id": "P056",
+   "category": "薪資與保險",
+   "question": "員工伙食費每月 2,400 元免稅，要不要算在薪資內",
+   "status": "新增：只有討論摘要，解法待審",
+   "discussion": "財政部函釋說，伙食費（含加班誤餐費）每人每月 2,400 元內不算員工薪資所得；討論集中在它算不算勞基法上的工資。",
+   "sources": [
+    {
+     "title": "財政部〈伙食費免稅限額之計算應包括加班誤餐費，在新臺幣2,400元內，免視為員工之薪資所得〉",
+     "url": "https://www.mof.gov.tw/singlehtml/384fb3077bb349ea973e7fc6f13b6974?cntId=dot85175"
+    },
+    {
+     "title": "中小企業財會諮詢服務網〈【會計處理】伙食費是算在薪資內嗎?〉",
+     "url": "https://accounting.sme.gov.tw/run.php?name=forum&file=post&p=565626"
+    }
+   ]
+  },
+  {
+   "id": "P057",
+   "category": "薪資與保險",
+   "question": "加班費哪些部分免稅，扣繳憑單怎麼填",
+   "status": "新增：只有討論摘要，解法待審",
+   "discussion": "討論集中在法定延長工時內的加班費免稅，以及超過時數的部分要併入薪資扣繳。",
+   "sources": [
+    {
+     "title": "中小企業財會諮詢服務網〈【營運管理】加班費申報為免稅所得〉",
+     "url": "https://accounting.sme.gov.tw/run.php?name=forum&file=post&p=531162"
+    },
+    {
+     "title": "PTT PublicServan〈Re: [請益] 加班費是否免稅？〉",
+     "url": "https://www.ptt.cc/bbs/PublicServan/M.1588640655.A.975.html"
+    }
+   ]
+  },
+  {
+   "id": "P058",
+   "category": "營業稅",
+   "question": "兼營應稅和免稅的營業人，進項用比例扣抵還是直接扣抵",
+   "status": "新增：只有討論摘要，解法待審",
+   "discussion": "爭點是比例扣抵法和直接扣抵法怎麼選、年底怎麼調整，以及申報核定後能不能改。",
+   "sources": [
+    {
+     "title": "財政部〈兼營營業人營業稅額計算辦法〉",
+     "url": "https://law-out.mof.gov.tw/LawContent.aspx?id=FL006087"
+    },
+    {
+     "title": "中小企業財會諮詢服務網〈【報稅實務】直扣法〉",
+     "url": "https://0800056476.sme.gov.tw/accounting/run.php?name=forum&file=post&p=535222"
+    }
+   ]
+  },
+  {
+   "id": "P059",
+   "category": "營業稅",
+   "question": "小規模營業人（免用發票行號）可以用進項扣減嗎",
+   "status": "新增：只有討論摘要，解法待審",
+   "discussion": "有人問免用發票的行號取得進項發票能不能扣減營業稅；也有人問收據能不能和勞務報酬單一起用。",
+   "sources": [
+    {
+     "title": "中小企業財會諮詢服務網〈【會計處理】行號免開發票，但進項憑證可抵稅額嗎〉",
+     "url": "https://accounting.sme.gov.tw/run.php?file=post&name=forum&p=567287"
+    },
+    {
+     "title": "中小企業財會諮詢服務網〈【報稅實務】小規模免用發票行號收據能否與勞務報酬單同步進行〉",
+     "url": "https://accounting.sme.gov.tw/run.php?file=post&name=forum&p=568009"
+    }
+   ]
+  },
+  {
+   "id": "P060",
+   "category": "薪資與保險",
+   "question": "勞退舊制：退休準備金提撥、支付退休金、結清後剩餘款怎麼入帳",
+   "status": "新增：只有討論摘要，解法待審",
+   "discussion": "討論集中在已提撥準備金時，支付退休金能不能直接列費用，以及舊制專戶結清後剩下的錢要不要列收益。",
+   "sources": [
+    {
+     "title": "中小企業財會諮詢服務網〈【會計處理】企業支付舊制退休金〉",
+     "url": "https://accounting.sme.gov.tw/run.php?name=forum&file=post&p=565956"
+    },
+    {
+     "title": "經濟日報〈結清勞退專戶結餘款 要稅〉",
+     "url": "https://money.udn.com/money/story/6710/9639868"
+    }
+   ]
+  },
+  {
+   "id": "P061",
+   "category": "財報",
+   "question": "中小企業怎麼編現金流量表（間接法）",
+   "status": "新增：只有討論摘要，解法待審",
+   "discussion": "常見疑問是用間接法從淨利調整到營業活動現金流量的步驟。",
+   "sources": [
+    {
+     "title": "中小企業財會諮詢服務網〈【知識庫】營業活動產生的現金流量：間接法〉",
+     "url": "https://0800056476.sme.gov.tw/accounting/run.php?name=kw&file=detail&id=333"
+    },
+    {
+     "title": "中小企業財會諮詢服務網〈【知識庫】編製現金流量表－一個簡單的例子〉",
+     "url": "https://0800056476.sme.gov.tw/accounting/run.php?name=kw&file=detail&id=336"
+    }
+   ]
+  },
+  {
+   "id": "P062",
+   "category": "營所稅",
+   "question": "關係企業之間交易，要注意哪些移轉訂價規定",
+   "status": "新增：只有討論摘要，解法待審",
+   "discussion": "討論集中在移轉訂價報告的準備門檻，以及年度結束前的一次性調整。",
+   "sources": [
+    {
+     "title": "財政部〈核釋關係企業間進行交易，於會計年度結束前進行一次性移轉訂價調整規定〉",
+     "url": "https://www.mof.gov.tw/singlehtml/384fb3077bb349ea973e7fc6f13b6974?cntId=af4d2fa9e233468488eb0366d0a93786"
+    }
+   ]
+  },
+  {
+   "id": "P063",
+   "category": "憑證與發票",
+   "question": "電子發票什麼時候還能作廢、忘了打統編怎麼補",
+   "status": "新增：只有討論摘要，解法待審",
+   "discussion": "常見疑問是電子發票的作廢期限，以及開立時漏打買受人統編，事後怎麼補。",
+   "sources": [
+    {
+     "title": "中小企業財會諮詢服務網〈【會計處理】電子發票作廢期限〉",
+     "url": "https://0800280280.sme.gov.tw/accounting/run.php?name=forum&file=post&p=575340"
+    },
+    {
+     "title": "財政部稅務入口網〈營業人開立電子發票時，未打買受人統編，事後如何補加統編?〉",
+     "url": "https://www.etax.nat.gov.tw/etwmain/tax-info/innotative-tax-e-reference/startup/invoice/vVPmx57"
+    }
+   ]
+  }
+ ]
+}
