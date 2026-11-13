@@ -104,7 +104,8 @@ def build():
     tabs = '<button class="btn tab" type="button" data-g="all" aria-pressed="true">全部 📚</button>' + "".join(f'<button class="btn tab" type="button" data-g="{k}" aria-pressed="false">{E(n)}</button>' for k, n, _, _ in GROUPS)
     grid = "".join(cards) or '<p class="mut">目前還沒有已核准的文章。每一篇都要通過機器閘門並由本人核准後才會出現在這裡。</p>'
     page("index.html", "首頁", f'''<section class="panel hero"><h1>✨ 會計圓桌 ✨</h1>
-<p>今天的會計小知識，決定權交給你！🐾</p>
+<p>寫給想用 AI 把會計工作做得更快的你 🐾</p>
+<p style="max-width:34em">每篇都告訴你：哪一步可以交給 AI、哪一步一定要自己核對，以及背後的法條原文。</p>
 <p class="mut" style="font-size:.9rem">每一句稅法說法都點得回原文 · 知識庫 {len(laws)} 部法規、{total:,} 條 · 同步日 {synced}</p>
 <button class="btn" type="button" id="gacha">🎲 今天學什麼？（隨機抽籤扭蛋）</button></section>
 <div class="tabs" role="group" aria-label="文章分類">{tabs}</div>
@@ -136,7 +137,7 @@ counts();rank();
 
     # 文章頁
     for a in arts:
-        paras = "".join("<p>" + re.sub(r"^(場景|為什麼|法條|不做會怎樣|小提醒)：", r"<strong>\1</strong>：", inline(p)) + "</p>" for p in a["body"].split("\n") if p.strip())
+        paras = "".join("<p>" + re.sub(r"^(場景|AI 可以幫什麼|自己要核對|為什麼|法條|不做會怎樣|小提醒)：", r"<strong>\1</strong>：", inline(p)) + "</p>" for p in a["body"].split("\n") if p.strip())
         cites = "".join(f'<div class="cite"><a href="{E(law_url(laws, c["law"], c["no"]))}">{E(c["law"])}第 {E(str(c["no"]))} 條</a>：「{E(c["quote"])}」</div>' for c in a["citations"])
         rows = "".join(f'<tr><td>{E(c["law"])}</td><td>第 {E(str(c["no"]))} 條</td></tr>' for c in a["citations"])
         page(f'articles/{a["id"]}.html', a["title"], f'''<div class="meta"><span>{E(a["topic"])}</span><span>同步日 {E(a["sync_date"])}</span></div>
