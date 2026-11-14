@@ -105,7 +105,7 @@ def build():
     grid = "".join(cards) or '<p class="mut">目前還沒有已核准的文章。每一篇都要通過機器閘門並由本人核准後才會出現在這裡。</p>'
     page("index.html", "首頁", f'''<section class="panel hero"><h1>✨ 會計圓桌 ✨</h1>
 <p>寫給想用 AI 把會計工作做得更快的你 🐾</p>
-<p style="max-width:34em">每篇都告訴你：哪一步可以交給 AI、哪一步一定要自己核對，以及背後的法條原文。</p>
+<p style="max-width:34em">想用 AI 又怕出錯？每篇我們都會跟你說：哪一步放心交給 AI、哪一步一定要自己看，法條原文也幫你附好了。</p>
 <p class="mut" style="font-size:.9rem">每一句稅法說法都點得回原文 · 知識庫 {len(laws)} 部法規、{total:,} 條 · 同步日 {synced}</p>
 <button class="btn" type="button" id="gacha">🎲 今天學什麼？（隨機抽籤扭蛋）</button></section>
 <div class="tabs" role="group" aria-label="文章分類">{tabs}</div>
